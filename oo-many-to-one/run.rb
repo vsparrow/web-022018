@@ -12,4 +12,5 @@ tweet3 = Tweet.new("ooooo oolong", tea_uncle)
 tweet4 = Tweet.new("peppermint so wintry", tea_uncle)
 
 
-Pry.start
+# Pry.start
+binding.pry
