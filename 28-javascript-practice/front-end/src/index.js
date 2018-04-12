@@ -101,9 +101,9 @@ function startCreateNew(){
   let submitButton = document.createElement('button')
   submitButton.textContent = "SUBMIT"
   submitButton.addEventListener("click",()=>{createTask()})////////////
-  document.querySelector("body").appendChild(description)
-  document.querySelector("body").appendChild(priority)
-  document.querySelector("body").appendChild(submitButton)
+  document.querySelector("#data").appendChild(description)
+  document.querySelector("#data").appendChild(priority)
+  document.querySelector("#data").appendChild(submitButton)
   // let li = document.createElement('li')
   // li.setAttribute('data-id',el.id)
 
