@@ -1,0 +1,21 @@
+flights index
+
+<h3>Search flights by destination:</h3>
+
+<%= form_tag "/flights/search", method: :get do %>
+  <%# input to receive user's data  %>
+  <%= collection_select :flight, :destination, @destinations, :to_s, :to_s %>
+  <%= submit_tag "Search" %>
+<% end %>
+
+<ul>
+  <% @flights.each do |flight| %>
+    <br>
+    <li>Flight number <%= link_to flight.number, flight_path(flight.id) %></li>
+    <p>Airline: <%= flight.airline.name %></p>
+    <p><strong>To:</strong>  <%= flight.destination %></p>
+    <p><strong>Departs:</strong>  <%= flight.etd %></p>
+    <p><strong>Arrives:</strong>  <%= flight.eta %></p>
+    <br>
+  <% end %>
+</ul>
